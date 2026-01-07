@@ -1,0 +1,271 @@
+<!-- Nama : Muhammad yusuf affandi -->
+<!-- Kelas : 3A -->
+<!-- NPM : 24670009 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uas desain web_24670009</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Font (keperluan fallback, kamu bisa ganti) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+
+  <body onload="greetingTime()">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Luminous UX</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-dark"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#karya">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tentang">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#hubungi">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- JUMBOTRON / HERO -->
+    <section class="jumbotron container-fluid ">
+      <div class="container h-100">
+        <div class="row align-items-center gx-4">
+
+          <!-- TEKS (kolom kiri di desktop, atas di mobile) -->
+          <div class="col-12 col-md-6 text-center text-md-start hero-text" data-aos="fade-up">
+            <!-- GREETING OTOMATIS -->
+            <h5 id="greeting" class="mb-2  fw-semibold"></h5>
+
+            <h1 class="hero-title">Welcome To My Company</h1>
+
+            <!-- Paragraf akan disembunyikan di layar kecil sesuai permintaan -->
+            <p class="hero-sub mt-3">
+              <strong>Luminous UX </strong>adalah perusahaan nomor 1 yang bergerak di bidang desain UI/UX di Semarang
+            </p>
+
+            <a href="#tentang" class="btn hero-cta mt-4">Tentang Perusahaan</a>
+          </div>
+
+          <!-- FOTO PROFIL (kolom kanan di desktop, bawah di mobile) -->
+          <div class="col-12 col-md-6 d-flex justify-content-center" data-aos="fade-left">
+            <div class="lingkaran d-flex align-items-center justify-content-center">
+              <img class="profil" src="2026-01-06__1_-removebg-preview.png" alt="Foto Profil" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUBBLE ANIMATION (tetap di background jumbotron) -->
+      <div class="bubble-container" aria-hidden="true">
+        <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+        <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+        <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      </div>
+    </section>
+
+    <!-- about -->
+     <section id="tentang">
+              <!-- DESKRIPSI -->
+            <div class="row justify-content-center  mt-5 ms-5" data-aos="fade-left">
+              <h3 class="fw-bold text-dark text-center mb-5">Deskripsi Perusahaan</h3>
+              <p class="text-dark">
+                <b>Luminous UX</b> adalah perusahaan yang bergerak di bidang desain <b>User Interface (UI) </b>dan <b>User Experience (UX)</b> yang berkomitmen untuk menghadirkan solusi digital yang inovatif, fungsional, dan berorientasi pada pengguna. Kami percaya bahwa tampilan dan pengalaman pengguna yang baik merupakan kunci utama dalam membangun produk digital yang efektif dan berdaya saing.
+
+Dalam setiap proyek, Luminous UX mengutamakan riset pengguna, perencanaan yang matang, serta penerapan desain modern yang selaras dengan identitas brand klien. 
+              </p>
+            </div>
+            <hr>
+      <div class="row justify-content-center mt-5 ms-5 mb-5" data-aos="fade-up">
+        <div class="col-6">
+          <h3 class="mb-5 text-center"><strong>Visi Perusahaan</strong> </h3>
+          <p>Menjadi perusahaan desain UI/UX yang unggul dan terpercaya dalam menciptakan pengalaman digital yang menarik, inovatif, dan berorientasi pada kebutuhan pengguna.</p>
+        </div>
+        <div class="col-6">
+          
+          <h3 class="mb-5 text-center"> <strong>Misi Perusahaan</strong></h3>
+
+          <ul>
+            <li>Merancang antarmuka digital yang estetis, intuitif, dan mudah digunakan.</li>
+            <li>Mengutamakan pengalaman pengguna dalam setiap proses desain.</li>
+            <li>Mengikuti perkembangan tren dan teknologi desain digital terkini.</li>
+            <li>Memberikan solusi desain yang mampu meningkatkan nilai dan citra bisnis klien.</li>
+          </ul>
+          
+        </div>
+      
+          </div>
+      </div>
+      
+     </section>
+
+     <!-- services -->
+<section id="services" class="jumbotron">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5 text-light">Layanan Kami</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4 text-center">
+        <i class="bi bi-palette fs-1 text-warning"></i>
+        <h5 class="mt-3 fw-bold">UI Design</h5>
+        <p>Desain antarmuka modern dan menarik sesuai identitas brand.</p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <i class="bi bi-search fs-1 text-warning"></i>
+        <h5 class="mt-3 fw-bold">UX Research</h5>
+        <p>Riset mendalam untuk memahami kebutuhan dan perilaku pengguna.</p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <i class="bi bi-phone fs-1 text-warning"></i>
+        <h5 class="mt-3 fw-bold">Prototyping</h5>
+        <p>Pembuatan prototype interaktif sebelum tahap pengembangan.</p>
+      </div>
+    </div>
+  </div>
+  <!-- BUBBLE ANIMATION (tetap di background jumbotron) -->
+      <div class="bubble-container" aria-hidden="true">
+        <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+        <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+        <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      </div>
+</section>
+
+    
+
+    
+    <!-- KARYA SAYA -->
+    <section id="karya" class="py-5">
+      <div class="container text-center">
+        <h2 class="display-5" id="karyasaya" data-aos="fade-up">Gallery</h2>
+        <p class="text-dark mb-4" data-aos="fade-up">Beberapa contoh karya yang kami buat selama mendirikan perusahaan ini</p>
+        
+
+        <!-- CARD SECTION -->
+        <div class="row justify-content-center mt-5 " data-aos="fade-up">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-8 col-md-4 d-flex justify-content-center">
+            <div class="mt-4 shadow-sm card-custom">
+              <img src="app ticket bioskop.png" class="card-img-top img-fluid card-image" alt="UI/UX" />
+              <div class="card-body">
+                <p >Design UI/UX aplikasi pemesanan ticket bioskop</p>
+                <a href="https://www.figma.com/proto/aucQcEse7F0w3NAyeBLlBu/Yusuf-Affandi-s-team-library?node-id=3311-2&t=kI8SAE8xAfvKy5gm-1" class="btn btn-sm hero-cta mt-2">Lihat Karya </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-8 col-md-4 d-flex justify-content-center">
+            <div class=" mt-4 shadow-sm card-custom">
+              <img src="app yellow roll.png" class="card-img-top img-fluid card-image" alt="" />
+              <div class="card-body">
+                <p >Design UI/UX mobile app umkm yellowroll.</p>
+                <a href="https://www.figma.com/proto/DlbGofUAeVd8zLIdFazkqu/Projek?node-id=10-39&t=bhFlTrJiwQEBcltB-1" class="btn btn-sm hero-cta mt-2">Lihat Karya </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-sm-8 col-md-4 d-flex justify-content-center">
+            <div class=" mt-4 shadow-sm card-custom">
+              <img src="iPhone 16.png" class="card-img-top img-fluid card-image" alt="" />
+              <div class="card-body">
+                <p >Design UI/UX mobile app jasa pembuatan website.</p>
+                <a href="https://www.figma.com/proto/DlbGofUAeVd8zLIdFazkqu/Projek?node-id=0-1&t=bhFlTrJiwQEBcltB-1" class="btn btn-sm hero-cta mt-2">Lihat Karya </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hubungi -->
+     <section id="hubungi" class="bg-light py-5">
+        <div class="container mt-5 ">
+    <h2>Hubungi Kami</h2>
+
+    <form>
+        <div class="mb-3">
+            <label>Nama</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label>Pesan</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        <button class="btn btn-sm hero-cta mt-2">Kirim</button>
+    </form>
+
+    <div class="mt-4 ">
+        <p>Email: PT.LuminousUX01@gmail.com</p>
+        <p>Telp: 08123456789</p>
+        <p>Alamat: Semarang, Indonesia</p>
+         
+        <div class="text-center mb-3">
+          <div class="map-wrapper d-flex justify-content-center mt-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126723.6566788334!2d110.24838951636217!3d-6.995821311559031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708ca45a9c52c3%3A0x67e7482251eedfbc!2sUniversitas%20PGRI%20Semarang!5e0!3m2!1sid!2sid!4v1767681239013!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <br>
+           <a  href="https://maps.app.goo.gl/Saw5bHiYRM3LDbqR8" class="btn btn-sm hero-cta mt-2">Lihat digoggle map</a>
+        </div>
+        
+    </div>
+</div>
+
+     </section>
+     
+
+
+    <footer>
+      <p class="footer">© 2026 PT.Luminous UX | Universitas PGRI Semarang</p>
+    </footer>
+
+    <script>
+      AOS.init();
+
+      // Navbar scrolled class toggle
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) navbar.classList.add("scrolled");
+        else navbar.classList.remove("scrolled");
+      });
+
+      // add scrolled when clicking nav links (for single page feel)
+      const navbar = document.querySelector(".navbar");
+      const links = document.querySelectorAll(".nav-link");
+      links.forEach((link) => link.addEventListener("click", () => navbar.classList.add("scrolled")));
+    </script>
+
+    <script src="greeting.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

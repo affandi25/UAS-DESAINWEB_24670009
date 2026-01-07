@@ -1,0 +1,261 @@
+:root{
+  --purple-1: #5305f0;
+  --purple-2: #986bf2;
+  --accent-1: #7ae8ff;
+  --accent-2: #f2c7ff;
+  --light: #f8f9fa;
+  --muted: #6c757d;
+  --radius: 12px;
+  --max-width: 1200px;
+}
+
+/* ===== Reset / Base ===== */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: "Poppins", sans-serif;
+  color: #0b0b0f;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  line-height:1.6;
+  background-color: #fff;
+}
+
+/* NAVBAR */
+.navbar{
+  transition: 0.3s ease;
+  background: transparent;
+}
+.navbar .navbar-brand{ font-weight:700; color: white; }
+.navbar .nav-link { color: rgba(255,255,255,0.95); }
+.navbar.scrolled{
+  background: #fff !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand { color: #111 !important; }
+
+/* Hamburger berubah hitam saat scroll */
+.navbar.scrolled .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* greeting */
+.greeting-pagi {
+  color: #d4af37; /* Soft Gold */
+}
+
+.greeting-siang {
+  color: #2563eb; /* Royal Blue */
+}
+
+.greeting-sore {
+  color: #ea580c; /* Burnt Orange */
+}
+
+.greeting-malam {
+  color: #0f172a; /* Midnight Blue */
+}
+
+/* ===== JUMBOTRON / HERO ===== */
+.jumbotron{
+  position: relative;
+  overflow: hidden;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, var(--purple-1) 0%, var(--purple-2) 100%);
+  color: #fff;
+  padding: 60px 0;
+}
+
+/* Ensure container content stacks correctly */
+.jumbotron .container{ position: relative; z-index: 3; }
+
+/* Hero text */
+.hero-title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 3.2rem); /* responsive */
+  line-height: 1.05;
+  margin: 0;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: #05060a;}
+
+/* Subtext (to hide on small screens) */
+.hero-sub{
+  color: rgba(255,255,255,0.95);
+  max-width: 680px;
+  margin: 1rem 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+}
+
+/* CTA button */
+.hero-cta{
+  display:inline-block;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: #05060a;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow: 0 10px 30px rgba(26,60,67,0.12);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.hero-cta:hover{ transform: translateY(-4px); box-shadow:0 18px 36px #05d5ff1f; }
+
+/* Lingkaran profil */
+.lingkaran{
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background-color: rgba(49,13,86,0.28);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Profil image */
+.profil{
+  display:block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Bubble background (behind content) */
+.bubble-container{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+}
+.bubble{
+  position:absolute;
+  bottom:-40px;
+  background: rgba(255,255,255,0.18);
+  border-radius:50%;
+  animation: rise 8s infinite ease-in;
+  filter: blur(0.6px);
+  opacity:.8;
+}
+.bubble:nth-child(odd){ width:40px; height:40px; }
+.bubble:nth-child(even){ width:20px; height:20px; }
+
+/* random positions */
+.bubble:nth-child(1){ left:8%; animation-duration:6s; }
+.bubble:nth-child(2){ left:22%; animation-duration:7s; }
+.bubble:nth-child(3){ left:38%; animation-duration:5s; }
+.bubble:nth-child(4){ left:54%; animation-duration:9s; }
+.bubble:nth-child(5){ left:70%; animation-duration:6.5s; }
+.bubble:nth-child(6){ left:80%; animation-duration:8s; }
+.bubble:nth-child(7){ left:92%; animation-duration:7.5s; }
+.bubble:nth-child(8){ left:14%; animation-duration:10s; }
+.bubble:nth-child(9){ left:50%; animation-duration:11s; }
+
+@keyframes rise{
+  0%{ transform: translateY(0) scale(1); opacity:.9; }
+  100%{ transform: translateY(-900px) scale(1.8); opacity:0; }
+}
+
+/* ===== Cards & general components ===== */
+.card-custom{
+  background: linear-gradient(100deg, var(--purple-1), var(--purple-2));
+  color: #fbfbfe;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: #05060a;
+}
+.card-custom .card-body{ background: transparent; color: #fff; }
+.card-image{ max-height: 300px; object-fit: cover; }
+
+/* Footer */
+footer{
+  text-align:center;
+  background: linear-gradient(100deg, var(--purple-1), var(--purple-2));
+  color: #fff;
+  padding: 18px 10px;
+}
+
+/* Map wrapper */
+.map-wrapper iframe{ border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+
+/* ===== Accessibility & small tweaks ===== */
+a:hover{ text-decoration: none; }
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+/* Desktop large >=1200px */
+@media (min-width:1200px){
+  .lingkaran{ width:400px; height:400px; }
+  .profil{ max-width:360px; }
+  .jumbotron{ padding: 80px 0; min-height:80vh;}
+}
+
+/* Desktop / laptop >=992px & <1200 */
+@media (min-width:992px) and (max-width:1199.98px){
+  .hero-title{ font-size: 2.8rem; }
+  .lingkaran{ width:360px; height:360px; }
+}
+
+/* Tablet >=768px & <992px */
+@media (min-width:768px) and (max-width:991.98px){
+  .hero-title{ font-size: 2.4rem; text-align:center; }
+  .jumbotron .row{ align-items:center; }
+  .hero-sub{ font-size:1rem; text-align:center; margin-left:auto; margin-right:auto; }
+  .lingkaran{ width:300px; height:300px; }
+  .profil{ max-width:260px; }
+  .navbar .nav-link{ color: rgba(255,255,255,0.95); }
+}
+
+/* Mobile <768px : stacked layout, hide paragraph under title, center everything */
+@media (max-width:767.98px){
+  .jumbotron{
+    padding: 48px 12px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--purple-1), var(--purple-2));
+    text-align:center;
+  }
+  .hero-text{ order:1; }
+  .hero-title{ font-size: clamp(1.6rem, 7vw, 2.4rem); }
+  .lingkaran{ margin: 18px auto 0; width: 220px; height: 220px; }
+  .profil{ max-width:500px; }
+  /* Hide the paragraph under the title on small screens (sesuai permintaan) */
+  .hero-sub{ display: none !important; }
+  /* Buttons slightly bigger and full-width suitable on mobile */
+  .hero-cta{ padding: 12px 22px; border-radius: 12px; display: inline-block; }
+  .card-custom{ max-width: 300px; }
+  .navbar .nav-link{ color: rgba(255,255,255,0.95); }
+}
+
+/* Extra small <576px: tighten spacing */
+@media (max-width:575.98px){
+  .lingkaran{ width:200px; height:200px; }
+  .profil{ max-width:180px; }
+  .jumbotron{ padding-top:36px; padding-bottom:36px; }
+  .card-image{ max-height:300px; }
+  footer{ padding: 14px 8px; font-size:0.9rem; }
+}
+
+/* Fix for z-index layering so hero text is above bubbles */
+.jumbotron .container{ z-index: 3; }
+.bubble-container{ z-index: 1; }
+
+/* small animation/fade-in (optional) */
+@keyframes fadeIn { from{ opacity:0; transform: translateY(8px); } to{ opacity:1; transform:none; } }
+.jumbotron, .card-custom, .profile-about { animation: fadeIn .9s ease both; }
